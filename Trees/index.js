@@ -1,12 +1,12 @@
 class BinaryTree {
     constructor(root){
-        this.val = root;
+        this.key = root;
         this.left = null;
         this.right = null;
     }
     // Get the value of the node
     getVal(){
-        return this.val;
+        return this.key;
     }
     // Get the left child
     getLeftChild(){
@@ -42,15 +42,14 @@ class BinaryTree {
         let index = 1;
 
         while (stack.length > 0){
-            let current = stack.pop()
-            console.log(`Root Node: `, current.getVal())
+            const current = stack.pop()
 
-            if (current.getLeftChild()) {
+            if (current.getLeftChild() !== null) {
                 stack.push(current.getLeftChild())
                 console.log(`Node ${index}'s left `, current.getLeftChild().getVal(), `\n`)
             }
 
-            if (current.getRightChild()) {
+            if (current.getRightChild() !== null) {
                 stack.push(current.getRightChild())
                 console.log(`Node ${index}'s right `, current.getRightChild().getVal(), `\n`)
             }
@@ -63,15 +62,16 @@ class BinaryTree {
 
 //Build a tree
 const list = ['John', 'Nick', "Jeff", 'Anne', "Marry", "Bane", "Marie", "Jane Doe"];
-let my_binary_tree = new BinaryTree(list[0]);
+const my_binary_tree = new BinaryTree(list[0]);
 
 const buildTree = (list) => {
     for (let i = 1; i < list.length; i+=1) {
         my_binary_tree.insertLeftChild(list[i])
         my_binary_tree.insertRightChild(list[i+1])
     }
-    console.log(my_binary_tree.stringValue());
+    console.log(my_binary_tree.stringValue()); 
     console.log(my_binary_tree);
+    return my_binary_tree;
 }
 
 buildTree(list);
