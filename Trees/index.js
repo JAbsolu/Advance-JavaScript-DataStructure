@@ -71,9 +71,6 @@ class BinaryTree {
             }
         }
     }
-
-   
-
 }
 
 //Build a tree
