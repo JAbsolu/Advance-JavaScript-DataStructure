@@ -54,3 +54,16 @@ const printList = (list) => {
 }
 
 printList(new_list);
+
+
+//Traverse list recursivelu
+const traverseList = (current) => {
+    
+    if (current) {
+        console.log(current.val);
+        traverseList(current.next);
+    }
+};
+
+console.log("*".repeat(60))
+traverseList(new_list.head)
