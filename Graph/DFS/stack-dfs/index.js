@@ -11,6 +11,8 @@ const nonDirectedGraph = {
 //return the set containing each unique nodes
 
 const exploreGraph = (graph, root) => {
+    if (!root) return "**** The root node does not exist! *****";
+
     const stack = [root];
     const visited = new Set(); 
 
@@ -26,5 +28,8 @@ const exploreGraph = (graph, root) => {
     return visited;
 }
 
-console.log(exploreGraph(nonDirectedGraph, 1));
-
+//test cases
+console.log(exploreGraph(nonDirectedGraph, 1)); 
+console.log(exploreGraph(nonDirectedGraph, 0)); 
+console.log(exploreGraph(nonDirectedGraph, 4));
+// console.log(exploreGraph(nonDirectedGraph, 8));
