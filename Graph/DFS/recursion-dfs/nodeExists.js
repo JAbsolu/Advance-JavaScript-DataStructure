@@ -12,7 +12,17 @@ const visited = new Set();
 const nodeExists = (graph, root, target) => {
     //If the root is not a node in the graph, return false
     if (!root) return false;
-    //check if the set already have the node, if not run the next block of code
+    /*
+        1. Check if the root node has already been visited
+        2. If not, access the array stored at graph[root] (root is a key in the graph map with an array as value)
+        3. If the node is equal to the target node, return true
+        4. If true was not returned, add the root node to the set. (mark the root node as visited)
+        5. Recall the nodeExists function (recursion) => Repeating the steps again, this time
+        passing the same graph, with the root node being the current node you're visiting in the array, and target 
+        remaining the same. Whenever nodeExists() is called, the only argument that's changed is the root node,
+        this repeats until either true is return or until every node have been visited.
+        6. Return false, if true is never returned
+    */
     if (!(visited.has(root))) {
         for (let node of graph[root]) {
             if (node === target) return true;
