@@ -7,7 +7,7 @@ const nonDirectedGraph = {
     5: [1,2,3,4],
 }
 
-//Find if a value exists in a graph in an undirected graph, then return true or false \
+//Find if a value exists in an undirected graph, then return true or false
 const visited = new Set();
 const nodeExists = (graph, root, target) => {
     //If the root is not a node in the graph, return false
@@ -42,7 +42,7 @@ const testCases = [
     nodeExists(nonDirectedGraph, 3, 10)
 ]
 
-//Loop through the testcases array, and return the result of the test
+//Loop the testcases array, and return the result of the test
 for (let i = 0; i < testCases.length; i++) {
     if (testCases[i]) {
         console.log(`Test ${i+1} returned ${testCases[i]}: Passed`);
