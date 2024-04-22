@@ -1,7 +1,22 @@
 /**
- * This code implements  a hash table
+ * This code implements  a hash table, the total process has a time complexity of O(N)
+ * A Hash Table is a data structure designed to be fast to work with.
+ *
+ * The reason Hash Tables are sometimes preferred instead of arrays or linked lists is because searching for, 
+ * adding, and deleting data can be done really quickly, even for large amounts of data.
+ *
+ * In a Linked List, finding a person "Bob" takes time because we would have to go from one node to the next, 
+ * checking each node, until the node with "Bob" is found.
+ *
+ * And finding "Bob" in an Array could be fast if we knew the index, but when we only know the name "Bob", 
+ * we need to compare each element (like with Linked Lists), and that takes time.
+ *
+ * With a Hash Table however, finding "Bob" is done really fast because there is a way to 
+ * go directly to where "Bob" is stored, using something called a hash function.
  */
-const names = ["Jane", "John", "Mark", "Mary", "Sam", "Kobe", "Kobe"];
+let names = ["Jane", "John", "Mark", "Mary", "Sam", "Kobe", "Kobe"];
+names = new Set(names);
+names = [...names];
 const hashTable = new Array(names.length); // create array and set  length to length of names array
 
 /**
@@ -54,6 +69,7 @@ const lookUpData = (value) => {
   else return item; // else item is a single value, not an array, return item
 }
 
+console.log(names);
 hashData(names);
 console.log(hashTable);
 console.log(lookUpData("Kobe"));
