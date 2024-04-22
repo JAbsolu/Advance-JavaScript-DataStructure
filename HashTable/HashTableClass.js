@@ -38,7 +38,7 @@ class HashTable {
 }
 
 // Example usage:
-let names = ["Jane", "John", "Mark", "Mary", "Sam", "Kobe", "Kobe", '5', 'A', 'b', 8, 10, {5: 4}];
+let names = ["Jane", "John", "Mark", "Mary", "Sam", "Kobe", "Kobe", '5', 'A', 'b', 8, 10];
 names = new Set(names);
 names = [...names];
 

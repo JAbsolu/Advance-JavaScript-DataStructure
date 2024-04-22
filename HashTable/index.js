@@ -14,7 +14,7 @@
  * With a Hash Table however, finding "Bob" is done really fast because there is a way to 
  * go directly to where "Bob" is stored, using something called a hash function.
  */
-let names = ["Jane", "John", "Mark", "Mary", "Sam", "Kobe", "Kobe"];
+let names = ["Jane", "John", "Mark", "Mary", "Sam", "Kobe", "Kobe", 5, 10, 'B'];
 names = new Set(names);
 names = [...names];
 const hashTable = new Array(names.length); // create array and set  length to length of names array
@@ -37,7 +37,7 @@ const hashWord = (value) => {
  */
 const hashData = (arr) => {
   for (let data of arr) {
-    const hashIndex = hashWord(data.toUpperCase());
+    const hashIndex = hashWord(data.toString().toUpperCase());
     /**
      * handle collisions
     */
@@ -69,7 +69,7 @@ const lookUpData = (value) => {
   else return item; // else item is a single value, not an array, return item
 }
 
-console.log(names);
+// console.log(names);
 hashData(names);
 console.log(hashTable);
 console.log(lookUpData("Kobe"));
