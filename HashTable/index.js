@@ -1,7 +1,7 @@
 /**
  * This code implements  a hash table
  */
-const names = ["Jane", "John", "Mark", "Mary", "Sam", "Kobe"];
+const names = ["Jane", "John", "Mark", "Mary", "Sam", "Kobe", "Kobe"];
 const hashTable = new Array(names.length); // create array and set  length to length of names array
 
 /**
@@ -17,7 +17,6 @@ const hashWord = (value) => {
 }
 
 /**
- * 
  * @param {*} arr takes an array
  * this function saves the data in the hash table
  */
@@ -43,7 +42,6 @@ const hashData = (arr) => {
 }
 
 /**
- * 
  * @param {*} value takes in a value
  * @returns returns the value from the hash table if it exists
  */
