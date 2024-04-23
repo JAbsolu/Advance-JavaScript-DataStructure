@@ -71,7 +71,7 @@ const lookUpData = (value) => {
     } 
     return `Found: ${value}`
   } else {
-    return `${value} not found`;
+    return `Not Found: ${value}`;
   }
 }
 
@@ -88,4 +88,4 @@ console.log(lookUpData("Josh")); //change the string in loopuDate to lookup othe
 console.log(lookUpData(40)); //change the string in loopuDate to lookup other data from hashtable
 console.log(lookUpData(10)); //change the string in loopuDate to lookup other data from hashtable
 console.log(lookUpData(10)); //change the string in loopuDate to lookup other data from hashtable
-console.log(lookUpData(437589346579439689453)); //change the param in loopuDate to lookup other data from hashtable
+console.log(lookUpData(43758934657943966453)); //change the param in loopuDate to lookup other data from hashtable
