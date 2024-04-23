@@ -75,7 +75,7 @@ const lookUpData = (value) => {
   }
 }
 
-// console.log(names);
+// console.log(names); // remove coment to print orginal names array
 hashData(names);
 console.log(hashTable);
 console.log(lookUpData("10")); //change the string in loopuDate to lookup other data from hashtable
@@ -88,4 +88,4 @@ console.log(lookUpData("Josh")); //change the string in loopuDate to lookup othe
 console.log(lookUpData(40)); //change the string in loopuDate to lookup other data from hashtable
 console.log(lookUpData(10)); //change the string in loopuDate to lookup other data from hashtable
 console.log(lookUpData(10)); //change the string in loopuDate to lookup other data from hashtable
-console.log(lookUpData(437589346579439689453)); //change the string in loopuDate to lookup other data from hashtable
+console.log(lookUpData(437589346579439689453)); //change the param in loopuDate to lookup other data from hashtable
