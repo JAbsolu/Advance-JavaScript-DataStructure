@@ -38,9 +38,8 @@ const hashWord = (value) => {
 const hashData = (arr) => {
   for (let data of arr) {
     const hashIndex = hashWord(data.toString().toUpperCase());
-    /**
-     * handle collisions
-    */
+    data = data.toString().toLowerCase();
+    // handle collisions
     if (hashTable[hashIndex] !== undefined) {
       const item = hashTable[hashIndex]; //get the value stored at the hash index
       if (typeof(item) === "object") {  // check if the type of item is an obj/array
@@ -61,15 +60,32 @@ const hashData = (arr) => {
  * @returns returns the value from the hash table if it exists
  */
 const lookUpData = (value) => {
-  const hashIndex = hashWord(value.toUpperCase()); // guess the hash index based on value passed
+  const hashIndex = hashWord(value.toString().toUpperCase()); // guess the hash index based on value passed
   const item = hashTable[hashIndex]; // save the item from hashtable location
+  value = value.toString().toLowerCase();
   
-  //check if item is an array, if yes instead of returning true just return the value passed
-  if (typeof(item) === "object") return !item.includes(value) || value 
-  else return item; // else item is a single value, not an array, return item
+  if ( item.includes(value) || hashTable.includes(value)) {
+    if (typeof(item) === "object" && item.includes(value)) {
+      // console.log('Sub array', hashTable[hashIndex]) //uncomment this code to see how this works
+      return `Found: ${item[item.indexOf(value)]}`; // return the value being looked up from the hashtable
+    } 
+    return `Found: ${value}`
+  } else {
+    return `${value} not found`;
+  }
 }
 
 // console.log(names);
 hashData(names);
 console.log(hashTable);
-console.log(lookUpData("Kobe"));
+console.log(lookUpData("10")); //change the string in loopuDate to lookup other data from hashtable
+console.log(lookUpData("5")); //change the string in loopuDate to lookup other data from hashtable
+console.log(lookUpData("Jane")); //change the string in loopuDate to lookup other data from hashtable
+console.log(lookUpData("Mary")); //change the string in loopuDate to lookup other data from hashtable
+console.log(lookUpData("sam")); //change the string in loopuDate to lookup other data from hashtable
+console.log(lookUpData("Paul")); //change the string in loopuDate to lookup other data from hashtable
+console.log(lookUpData("Josh")); //change the string in loopuDate to lookup other data from hashtable
+console.log(lookUpData(40)); //change the string in loopuDate to lookup other data from hashtable
+console.log(lookUpData(10)); //change the string in loopuDate to lookup other data from hashtable
+console.log(lookUpData(10)); //change the string in loopuDate to lookup other data from hashtable
+console.log(lookUpData(437589346579439689453)); //change the string in loopuDate to lookup other data from hashtable
