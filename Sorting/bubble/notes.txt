@@ -1,0 +1,10 @@
+credit to W3School
+https://www.w3schools.com/dsa/dsa_algo_bubblesort.php
+
+Bubble sort is a sorting algorithm that sorts an array from the lowest value to the highest value
+
+Bubble sort works by,
+1. Going through the array one value at a time
+2. For each value, it compares the value with the next value
+3. If the value is higher than the next one, the values are swap so the highest value comes last
+4. Go through the arrays as many times as there are values in the arr
