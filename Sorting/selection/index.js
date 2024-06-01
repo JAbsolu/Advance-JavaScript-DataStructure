@@ -8,27 +8,20 @@ const nums = [ 7, 12, 9, 11, 3];
  * The algorithm runs at O(n^2)
  */
 const sort = (arr) => {
-    // get the length of the array
-  const n = arr.length;
-  // start first loop
+  const n = arr.length; // get the length of the array
+
   for (let i = 0; i < n; i++) {
-    // assume the minimum value is at i
-    let min = arr[i];
-    // start second loop
+    let min = arr[i]; // assume the minimum value is at i
     for (let j = i+1; j < n; j++){
       // check if element at j is smaller than val at min
       if (arr[j] < min) {
-        // if true, reassign the value to element at j
-        min = arr[j];
-        // swap element at j with element at i
-        arr[j] = arr[i]
-        // store new min val at i
-        arr[i] = min;
+        min = arr[j]; // reassign the value to element at j
+        arr[j] = arr[i] // swap element at j with element at i
+        arr[i] = min; // store new min val at i
       }
     }
   }
-  // return the sorted array
-  return arr;
+  return arr; // return the sorted array
 }
 
 console.log("\nsorted array:", sort(nums) + "\n");
@@ -49,18 +42,13 @@ console.log("\nsorted array:", sort(nums) + "\n");
 const arr = [64, 34, 25, 5, 22, 11, 90, 12];
 
 const shiftingMethod = (myArray) => {
-  // get the length of the array
-  let n = myArray.length;
-  // start first loop
+  let n = myArray.length; // get the length of the array
   for (let i = 0; i < n - 1; i++) {
-    // assume min value is at index i
-    let minIndex = i;
-    // start second loop
+    let minIndex = i; // assume min value is at index i
     for (let j = i + 1; j < n; j++) {
       // check if element at j is lower than item at minIndex
       if (myArray[j] < myArray[minIndex]) {
-        // if true, save the new index with the lower value at minIndex
-        minIndex = j;
+        minIndex = j; // save the new index with the lower value at minIndex
       }
     }
     // save the first value of the splice method in newMin, thats what [0] does
