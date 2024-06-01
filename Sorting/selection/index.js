@@ -1,5 +1,4 @@
 const nums = [ 7, 12, 9, 11, 3];
-
 /**
  * The algorithm below is the more efficient version of selection sort
  * Instead of removing element and adding to the front of the array, it 
@@ -34,17 +33,19 @@ const sort = (arr) => {
 
 console.log("\nsorted array:", sort(nums) + "\n");
 
-// ---------------------------------------------------------- //
-// --------------------------------------------------------- //
-
 /**
- * The method below is the less efficient way to implement selection sort
- * This algorithm works by removing the lowest value out of the array
- * and adds it to the front of the array. 
- * This algirthm is more time costing because, in order to add the lowest
- * value to the begining of the array, every other elements must be shifted 
- * to the right.
- */
+ ** -------------------------------------------------------------------------- **
+ ** -------------------------------------------------------------------------- **
+ ** The method below is the less efficient way to implement selection sort     **
+ ** This algorithm works by removing the lowest value out of the array         **
+ ** and adds it to the front of the array.                                     **
+ ** This algirthm is more time costing because, in order to add the lowest     **
+ ** value to the begining of the array, every other elements must be shifted   **
+ ** to the right.                                                              **
+ ** -------------------------------------------------------------------------- **
+ ** -------------------------------------------------------------------------- **
+ **/
+
 const arr = [64, 34, 25, 5, 22, 11, 90, 12];
 
 const shiftingMethod = (myArray) => {
