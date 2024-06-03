@@ -21,4 +21,33 @@ const sort = (arr) => {
   return arr; // return the sorterd array as a string
 }
 
-console.log("\nSorter array:", sort(numArr) + "\n");
+console.log("\nIteratively sorted array:", sort(numArr) + "\n");
+
+
+/**
+ * Below is a recursive version of the bubble sort solution
+ */
+
+
+
+const recursiveSort = (arr) => {
+  let index = 0;
+  return swap(arr, index);
+}
+
+const swap = (a, i) => {
+  if (i < a.length) {
+    for (let j = 0; j < a.length; j++) {
+      if (a[j] > a[j + 1]) {
+        const min = a[j + 1];
+        a[j + 1] = a[j];
+        a[j] = min;
+      }
+    }
+    swap(a, i + 1);
+  }
+  return a;
+}
+
+
+console.log("Recursively sorted array:", recursiveSort(numArr) + "\n");
