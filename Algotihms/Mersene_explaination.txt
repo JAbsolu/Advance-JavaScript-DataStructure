@@ -1,0 +1,12 @@
+Mersenne Numbers
+
+A Mersenne number is defined as a number that can be written in the form 
+M base n = 2^n -1, where n is an integer. Mersenne numbers consist of all 
+1s in binary numbers, which makes them binary repunits. These numbers are
+ named after the French Mathematician Marin Mersenne.
+ 
+A Mersenne prime is a Mersenne number that is also a prime number, what that 
+means is that for 2^n - 1 to be a Mersenne prime, the integer n itself must 
+be a prime number. For example, when n = 3, 2^3 -1 = 7, which is a prime 
+number, making the result 7 a Mersenne Prime. However not ever n prime 
+number of 2^n -1 is equal to a Mersenne prime number.
